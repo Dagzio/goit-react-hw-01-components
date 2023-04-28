@@ -1,5 +1,3 @@
-// сюда стили через импорт
-// дальше експорт компонента
 import PropTypes from 'prop-types'
 import { ProfileCard } from './Profile.styled';
 import { Description } from './Profile.styled'

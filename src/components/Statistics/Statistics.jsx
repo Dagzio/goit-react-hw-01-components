@@ -1,30 +1,31 @@
+import PropTypes from 'prop-types'
+import { Section } from "./Statistics.styled";
+import { StatsTitle } from "./Statistics.styled";
+import { StatsList } from "./Statistics.styled";
+import { StatsListItem } from "./Statistics.styled";
 
 
-const Statistics = (title, stats) => {
-return <section class="statistics">
-  <h2 class="title">Upload stats</h2>
+const Statistics = ({ title, stats }) => {
+  return <Section>
+    {title !== '' && <StatsTitle>{title}</StatsTitle>}
+        <StatsList>
+      {stats.map(statsBox => {
+        return <StatsListItem className="item" key={statsBox.id} type={statsBox.label}>
+          <span className="label">{statsBox.label}</span>
+          <span className="percentage">{statsBox.percentage}%</span>
+        </StatsListItem>
+      })}
+    </StatsList>
+    </Section>
+};
 
-  <ul class="stat-list">
-    <li class="item">
-      <span class="label">{stats.label}</span>
-      <span class="percentage">{stats.percentage}</span>
-    </li>
-    <li class="item">
-      <span class="label">.mp3</span>
-      <span class="percentage">14%</span>
-    </li>
-    <li class="item">
-      <span class="label">.pdf</span>
-      <span class="percentage">41%</span>
-    </li>
-    <li class="item">
-      <span class="label">.mp4</span>
-      <span class="percentage">12%</span>
-    </li>
-  </ul>
-</section>
-
-
+Statistics.propTypes = {
+    title: PropTypes.string,
+    stats: PropTypes.arrayOf(PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        label: PropTypes.string.isRequired,
+        percentage: PropTypes.number.isRequired,
+    }))
 };
 
 

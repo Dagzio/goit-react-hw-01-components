@@ -1,12 +1,12 @@
-// отсюда експорт компонентов со стилями
 import styled from 'styled-components';
 
 export const ProfileCard = styled.div`
-width: 320px;
+width: 300px;
 background-color: #dbdbdb;
 padding-top: 12px;
 border-radius: 4px;
 box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75);
+margin-right: 50px;
 `;
 
 export const Description = styled.div`
@@ -41,16 +41,20 @@ margin-bottom: 32px;
 
 export const StatsList = styled.ul`
 display: flex;
-background-color: #e1e4e4;
-justify-content: space-around;
-padding: 16px;
+background-color: #d9e6e6;
 border-top: 1px solid #868686;
 `;
 
 export const StatsListItem = styled.li`
 display: flex;
+width: calc(100% / 3);
 flex-direction: column;
 text-align:center;
+padding: 12px;
+
+&:not(:last-child){
+    border-right: 1px solid #868686;
+}
 `;
 
 export const StatsName = styled.span`

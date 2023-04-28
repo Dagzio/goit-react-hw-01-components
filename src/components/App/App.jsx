@@ -1,12 +1,13 @@
-// сюда импорт компонентов.jsx без styled
 import { Container } from './App.styled';
 
 import Profile from "../Profile/Profile"
 import user from 'components/Profile/user.json';
 
 import Statistics from 'components/Statistics/Statistics';
-import data from '../Statistics/data.json'
+import data from 'components/Statistics/data.json'
 
+import FriendList from 'components/FriendList/FriendList';
+import friends from 'components/FriendList/friends.json';
 
 
 export const App = () => {
@@ -20,9 +21,13 @@ export const App = () => {
       stats={user.stats}
     />
       <Statistics
-        title="Upload stats"
+        title="Upload Files"
         stats={data} />
       
-      </Container>
+
+      <FriendList friends={friends} />;
+    </Container>
+
+
   );
 };
