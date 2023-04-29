@@ -1,15 +1,12 @@
-
 import FriendListItem from "../FriendListItem/FriendListItem";
+import List from "./FriendList.styled";
 
-
-const FriendList = ( {friends} ) => {
-  return <ul className="friend-list">
+const FriendList = ({ friends }) => {
+  return <List className="friend-list">
     {friends.map(friend => {
-      return <FriendListItem />
+      return <FriendListItem key={friend.id} friend={friend} />
     })}
-  </ul>
+  </List>
 };
-
-
 
 export default FriendList;

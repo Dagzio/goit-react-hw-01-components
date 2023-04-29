@@ -1,14 +1,10 @@
 import PropTypes from 'prop-types'
-import { ProfileCard } from './Profile.styled';
-import { Description } from './Profile.styled'
-import { Img } from './Profile.styled';
-import { UserName } from './Profile.styled';
-import { UserTag } from './Profile.styled';
-import { Location } from './Profile.styled';
-import { StatsList } from './Profile.styled';
-import { StatsListItem } from './Profile.styled';
-import { StatsName } from './Profile.styled';
-import { StatsValue } from './Profile.styled';
+import {
+    ProfileCard, Description,
+    Img, UserName,
+    UserTag, Location,
+    StatsList, StatsListItem,
+    StatsName, StatsValue } from './Profile.styled';
 
 export const Profile = ({ username, stats, tag, avatar, location}) => {
     return <ProfileCard>

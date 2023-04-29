@@ -43,6 +43,7 @@ export const StatsList = styled.ul`
 display: flex;
 background-color: #d9e6e6;
 border-top: 1px solid #868686;
+border-radius: 4px;
 `;
 
 export const StatsListItem = styled.li`

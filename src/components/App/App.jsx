@@ -1,4 +1,4 @@
-import { Container } from './App.styled';
+import Container from './App.styled';
 
 import Profile from "../Profile/Profile"
 import user from 'components/Profile/user.json';
@@ -9,8 +9,12 @@ import data from 'components/Statistics/data.json'
 import FriendList from 'components/FriendList/FriendList';
 import friends from 'components/FriendList/friends.json';
 
+import TransactionHistory from 'components/TransactionHistory/TransactionHistory';
+import transactions from 'components/TransactionHistory/transactions.json';
 
-export const App = () => {
+
+
+const App = () => {
   return (
     <Container>
     <Profile
@@ -25,9 +29,13 @@ export const App = () => {
         stats={data} />
       
 
-      <FriendList friends={friends} />;
+      <FriendList friends={friends} />
+
+      <TransactionHistory items={transactions} />
     </Container>
 
 
   );
 };
+
+export default App;
